@@ -3,9 +3,9 @@ package:
   version: 2.5.39
 
 source:
-  fn: flex-2.5.39.tar.gz # [linux]
-  url: http://sourceforge.net/projects/flex/files/flex-2.5.39.tar.gz # [linux]
-  md5: e133e9ead8ec0a58d81166b461244fde # [linux]
+  fn: flex-2.5.39.tar.gz
+  url: http://sourceforge.net/projects/flex/files/flex-2.5.39.tar.gz
+  md5: e133e9ead8ec0a58d81166b461244fde
 
 about:
     home: http://flex.sourceforge.net/
@@ -13,7 +13,7 @@ about:
 
 requirements:
   build:
-    - m4 # [linux]
+    - m4
 
   run:
-    - m4 # [linux]
+    - m4
