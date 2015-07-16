@@ -1,11 +1,11 @@
 package:
   name: tifffile
-  version: 0.3.1
+  version: "0.6.2"
 
 source:
-  fn: tifffile-0.3.1.tar.gz
-  url: https://pypi.python.org/packages/source/t/tifffile/tifffile-0.3.1.tar.gz
-  md5: bd8718457f3578a6016d6dd3c6a041ed
+  fn: tifffile-0.6.2.tar.gz
+  url: https://pypi.python.org/packages/source/t/tifffile/tifffile-0.6.2.tar.gz
+  md5: c36c66b1bc29f406f3277ad8e1d35d6d
 #  patches:
    # List any patch files here
    # - fix.patch
