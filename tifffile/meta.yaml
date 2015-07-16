@@ -28,12 +28,12 @@ source:
 
 requirements:
   build:
-    - python 2.7*|>=3.4
+    - python
     - setuptools
     - numpy >=1.8.2
 
   run:
-    - python 2.7*|>=3.4
+    - python
     - numpy >=1.8.2
 
 test:
