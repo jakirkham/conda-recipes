@@ -11,8 +11,8 @@ source:
    # - fix.patch
 
 # build:
-  #preserve_egg_dir: True
-  #entry_points:
+  # preserve_egg_dir: True
+  # entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
     #
@@ -39,7 +39,7 @@ test:
   imports:
     - tifffile
 
-  #commands:
+  # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
 
@@ -49,10 +49,11 @@ test:
 
   # requires:
     # Put any additional test requirements here.  For example
+    # - nose
 
 about:
   home: https://github.com/blink1073/tifffile
-  license:  BSD License
+  license: BSD License
   summary: 'Read and write image data from and to TIFF files.'
 
 # See
