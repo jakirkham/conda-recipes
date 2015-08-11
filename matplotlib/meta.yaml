@@ -21,6 +21,7 @@ requirements:
     - numpy
     - python-dateutil
     - freetype
+    - ffmpeg
     - nose
     - pyparsing
     - pytz
@@ -34,11 +35,15 @@ requirements:
     - numpy
     - python-dateutil
     - freetype            [unix]
+    - ffmpeg
     - pytz
     - pyparsing
     - py2cairo            [linux and py2k]
     - libpng              [unix]
     - pyqt                [not osx]
+
+build:
+  number: 4
 
 about:
   home: http://matplotlib.sourceforge.net/
