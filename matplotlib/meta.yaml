@@ -29,7 +29,7 @@ requirements:
     - tornado
     - libpng
     - zlib                [win]
-    - pyqt                [not osx]
+    - pyqt
   run:
     - python
     - numpy
@@ -40,10 +40,10 @@ requirements:
     - pyparsing
     - py2cairo            [linux and py2k]
     - libpng              [unix]
-    - pyqt                [not osx]
+    - pyqt
 
 build:
-  number: 4
+  number: 5
 
 about:
   home: http://matplotlib.sourceforge.net/
