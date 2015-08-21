@@ -1,0 +1,32 @@
+package:
+  name: gfortran
+  version: 4.8.5
+
+requirements:
+  build:
+    - gcc 4.8.5
+  run:
+    # I'm unsure if these are all still needed but it doesn't hurt to have them.
+    - gmp >=4.2
+    - mpfr >=2.4.0
+    - mpc >=0.8.0
+    - isl
+    - cloog 0.18.0
+
+build:
+  always_include_files:
+
+    - bin/gfortran
+    - bin/x86_64-apple-darwin11.4.2-gfortran  # [osx]
+    - bin/i686-pc-linux-gnu-gfortran          # [linux32]
+    - bin/x86_64-unknown-linux-gnu-gfortran   # [linux64]
+
+    - include/*
+    - lib/*
+    - libexec/*
+    - share/*
+
+about:
+  home: http://gcc.gnu.org/
+  summary: Shared libraries for the GNU Compiler Collection
+  license: GPL
