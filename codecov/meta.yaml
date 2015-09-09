@@ -54,7 +54,7 @@ test:
   # at test time.
 
   requires:
-    - unittest2
+    - unittest2      # [py26]
     # Put any additional test requirements here.  For example
     # - nose
 
