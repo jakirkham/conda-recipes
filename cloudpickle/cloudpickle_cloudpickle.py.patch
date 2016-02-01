@@ -1,7 +1,7 @@
-diff --git a/cloudpickle/cloudpickle.py b/cloudpickle/cloudpickle.py
+diff --git cloudpickle/cloudpickle.py cloudpickle/cloudpickle.py
 index 51f15da..04eeeb9 100644
---- a/cloudpickle/cloudpickle.py
-+++ b/cloudpickle/cloudpickle.py
+--- cloudpickle/cloudpickle.py
++++ cloudpickle/cloudpickle.py
 @@ -584,11 +584,16 @@ class CloudPickler(Pickler):
          self.save(retval)
          self.memoize(obj)
