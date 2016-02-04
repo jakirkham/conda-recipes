@@ -16,9 +16,9 @@ LIBRARY_PATH="${PREFIX}/lib"
 if [ "$(uname)" == "Darwin" ]; then
     MACOSX_VERSION_MIN=10.7
     CXXFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    CXXFLAGS="${CXXFLAGS} -stdlib=libc++"
+    CXXFLAGS="${CXXFLAGS} -stdlib=libc++ -std=c++11"
     LINKFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -L${LIBRARY_PATH}"
+    LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -std=c++11 -L${LIBRARY_PATH}"
 
     ./bootstrap.sh \
         --prefix="${PREFIX}" \
@@ -35,6 +35,7 @@ if [ "$(uname)" == "Darwin" ]; then
         threading=multi \
         link=shared \
         toolset=clang \
+        python="${PY_VER}" \
         include="${INCLUDE_PATH}" \
         cxxflags="${CXXFLAGS}" \
         linkflags="${LINKFLAGS}" \
@@ -43,6 +44,9 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 if [ "$(uname)" == "Linux" ]; then
+    CXXFLAGS="${CXXFLAGS} -std=c++11"
+    LINKFLAGS="${LINKFLAGS} -std=c++11 -L${LIBRARY_PATH}"
+
     ./bootstrap.sh \
         --prefix="${PREFIX}" \
         --with-python="${PYTHON}" \
@@ -61,7 +65,8 @@ if [ "$(uname)" == "Linux" ]; then
         toolset=gcc \
         python="${PY_VER}" \
         include="${INCLUDE_PATH}" \
-        linkflags="-L${LIBRARY_PATH}" \
+        cxxflags="${CXXFLAGS}" \
+        linkflags="${LINKFLAGS}" \
         --layout=system \
         -j"${CPU_COUNT}" \
         install | tee b2.log 2>&1
